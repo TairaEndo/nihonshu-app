@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}
+    結果ページ
+{% endblock %}
+
+{% block headline %}
+    {#{{ title }}#}
+{% endblock %}
+
+{% block content %}
+    <div>
+      <style>
+        h2{ 
+          margin:0 200px;
+          padding: 10px 30px;
+          background-color: #2597a1;
+        color:white;
+        }
+    </style>
+        <h2>おすすめの日本酒</h2>      
+    </div>
+
+    <section class="card">
+      <img class="card-img" src="../static/images/{{ sake.0.0 }}.jpg"  alt="写真が用意できませんでした">
+      <div class="card-content">
+        <h1 class="card-title">{{ sake.0.0 }}</h1>
+        <p class="card-text">純米／純米吟醸：{{ sake.0.4 }}</p>
+        <p class="card-text">酒造：{{ sake.0.5 }}</p>
+        <p class="card-text">場所：{{ sake.0.6 }}</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img class="card-img" src= "{{ sake.1.7 }}" alt="">
+      <div class="card-content">
+        <h1 class="card-title">{{ sake.1.0 }}</h1>
+        <p class="card-text">純米／純米吟醸：{{ sake.1.4 }}</p>
+        <p class="card-text">酒造：{{ sake.1.5 }}</p>
+        <p class="card-text">場所：{{ sake.1.6 }}</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <img class="card-img" src= "{{ sake.2.7 }}"  alt="">
+      <div class="card-content">
+        <h1 class="card-title">{{ sake.2.0 }}</h1>
+        <p class="card-text">純米／純米吟醸：{{ sake.2.4 }}</p>
+        <p class="card-text">酒造：{{ sake.2.5 }}</p>
+        <p class="card-text">場所：{{ sake.2.6 }}</p>
+      </div>
+    </section>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

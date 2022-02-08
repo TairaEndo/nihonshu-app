@@ -1,0 +1,50 @@
+[
+  {
+    "sake_id": 1,
+    "name": "結ゆい",
+    "quadrant": 1,
+    "popularity": 17,
+    "taste": 1.9,
+    "flavor": 2.4
+  },
+  {
+    "sake_id": 2,
+    "name": "愛友",
+    "quadrant": 1,
+    "popularity": 7,
+    "taste": 1.6,
+    "flavor": 2.0
+  },
+  {
+    "sake_id": 17,
+    "name": "渡舟",
+    "quadrant": 2,
+    "popularity": 20,
+    "taste": 0.9,
+    "flavor": 2.8
+  },
+  {
+    "sake_id": 18,
+    "name": "御慶事",
+    "quadrant": 2,
+    "popularity": 3,
+    "taste": 1.1,
+    "flavor": 0.7
+  },
+  {
+    "sake_id": 19,
+    "name": "徳政宗",
+    "quadrant": 2,
+    "popularity": 2,
+    "taste": 1.1,
+    "flavor": 1.7
+  },
+  {
+    "sake_id": 20,
+    "name": "男女川",
+    "quadrant": 2,
+    "popularity": 13,
+    "taste": 1.5,
+    "flavor": 0.6
+  }
+]

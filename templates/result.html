@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}
+    結果ページ
+{% endblock %}
+{% block headline %}
+    {#    {{ title }}#}
+{% endblock %}
+{% block content %}
+
+<div>
+    <style>
+       h3 {
+            color: #364e96;/*文字色*/
+            padding: 0.5em 0;/*上下の余白*/
+            border-top: solid 3px #364e96;
+            border-bottom: solid 3px #364e96;/*下線*/}
+  </style>      
+</div>
+
+<div>
+    <style>
+       h2 {
+  position: relative;
+  padding: 1rem 2rem calc(1rem + 8px);
+  background: #fff;}
+
+h2:before {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 4px solid #364e96;}
+  </style>
+
+    <h2>おすすめの日本酒 </h2>    
+
+</div>
+
+    {% for sake in sake_list %}
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../static/images/{{ sake.name }}.jpg" width="" height="250"/>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ loop.index }}位 {{ sake.name }}</h3>
+                        <p class="card-text">種類： {{ sake.category }}</p>
+                        <p class="card-text">酒造： {{ sake.brewery }}</p>
+                        <p class="card-text">場所： {{ sake.place }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    <form action="/" method="get">
+        <button type="submit" class="btn btn-primary">回答に戻る</button>
+    </form>
+{% endblock %}
+{% block footer %}
+{% endblock %}

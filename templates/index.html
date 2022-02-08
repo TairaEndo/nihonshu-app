@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    日本酒階層分析
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <style>
+       h2 {
+            color: #364e96;/*文字色*/
+            padding: 0.5em 0;/*上下の余白*/
+            border-top: solid 3px #364e96;
+            border-bottom: solid 3px #364e96;/*下線*/}
+  </style>
+      <h2>あなたにぴったりの日本酒を！</h2>      
+</div>
+
+    <div class="">
+
+        <div>
+            <form action="/form_submit" method="POST">
+                <h3 class="my-4">①あなたの好みを教えてください</h3>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">味</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="taste">
+                        <option value="1">濃い</option>
+                        <option value="2">淡い</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">香り</label>
+                    <select class="form-control" id="exampleFormControlSelect2" name="flavor">
+                        <option value="1">高い</option>
+                        <option value="2">控えめ</option>
+                    </select>
+                </div>
+                <h3 class="my-4">②どの項目をより重要視しますか</h3>
+                <table class="text-center display dataTable no-footer table table-condensed">
+                    <thead>
+                    <tr>
+                        <th class="sorting_disabled" rowspan="1" colspan="1"></th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1">左の項目がとても重要</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1">左の項目が重要</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1">同じくらい重要</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1">右の項目が若干重要</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1">右の項目がとても重要</th>
+                        <th class="sorting_disabled" rowspan="1" colspan="1"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                        <td>味</td>
+                        <td><input type="radio" name="taste_flavor" value="0"></td>
+                        <td><input type="radio" name="taste_flavor" value="1"></td>
+                        <td><input type="radio" name="taste_flavor" value="2" checked></td>
+                        <td><input type="radio" name="taste_flavor" value="3"></td>
+                        <td><input type="radio" name="taste_flavor" value="4"></td>
+                        <td>香り</td>
+                    </tr>
+                    <tr class="">
+                        <td>味</td>
+                        <td><input type="radio" name="taste_popularity" value="0"></td>
+                        <td><input type="radio" name="taste_popularity" value="1"></td>
+                        <td><input type="radio" name="taste_popularity" value="2" checked></td>
+                        <td><input type="radio" name="taste_popularity" value="3"></td>
+                        <td><input type="radio" name="taste_popularity" value="4"></td>
+                        <td>人気度</td>
+                    </tr>
+                    <tr class="">
+                        <td>香り</td>
+                        <td><input type="radio" name="flavor_popularity" value="0"></td>
+                        <td><input type="radio" name="flavor_popularity" value="1"></td>
+                        <td><input type="radio" name="flavor_popularity" value="2" checked></td>
+                        <td><input type="radio" name="flavor_popularity" value="3"></td>
+                        <td><input type="radio" name="flavor_popularity" value="4"></td>
+                        <td>人気度</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-primary">決定</button>
+            </form>
+        </div>
+    </div>
+
+    {#                <div class="row">#}
+    {#                    <div class="col-1">#}
+    {#                        <h5>味</h5>#}
+    {#                    </div>#}
+    {#                    <div class="col">#}
+    {#                        <input type="range" class="custom-range" min="-2" max="2" step="1" id="customRange1"#}
+    {#                               name="taste_flavor">#}
+    {#                    </div>#}
+    {#                    <div class="col-1">#}
+    {#                        <h5>香り</h5>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {##}
+    {#                <div class="row">#}
+    {#                    <div class="col-1">#}
+    {#                        <h5>味</h5>#}
+    {#                    </div>#}
+    {#                    <div class="col">#}
+    {#                        <input type="range" class="custom-range" min="-2" max="2" step="1" id="customRange1"#}
+    {#                               name="taste_popularity">#}
+    {#                    </div>#}
+    {#                    <div class="col-1">#}
+    {#                        <h5>人気度</h5>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {##}
+    {#                <div class="row">#}
+    {#                    <div class="col-1">#}
+    {#                        <h5>香り</h5>#}
+    {#                    </div>#}
+    {#                    <div class="col">#}
+    {#                        <input type="range" class="custom-range" min="-2" max="2" step="1" id="customRange1"#}
+    {#                               name="flavor_popularity">#}
+    {#                    </div>#}
+    {#                    <div class="col-1">#}
+    {#                        <h5>人気度</h5>#}
+    {#                    </div>#}
+    {#                </div>#}
+{% endblock %}
