@@ -57,13 +57,13 @@ def recommend(taste, flavor, taste_flavor, taste_popularity, flavor_popularity):
         # 上位3つをおすすめとして表示
         return df1s[['name', 'category', 'brewery', 'place']].head(3).to_dict(orient='records')
 
-    if a1 == 1 and a2 == 2:  # 第2象限
+    if a1 == 2 and a2 == 1:  # 第2象限
         df2 = df.iloc[10:13]
         df2['recommend_value'] = df2['taste'] * j1 + df2['flavor'] * j2 + df2['popularity'] * j3
         df2s = df2.sort_values('recommend_value', ascending=False)
         return df2s[['name', 'category', 'brewery', 'place']].head(3).to_dict(orient='records')
 
-    if a1 == 2 and a2 == 1:  # 第3象限
+    if a1 == 2 and a2 == 2:  # 第3象限
         df3 = df.iloc[14:18]
         df3['recommend_value'] = df3['taste'] * j1 + df3['flavor'] * j2 + df3['popularity'] * j3
         df3s = df3.sort_values('recommend_value', ascending=False)
